@@ -13,7 +13,7 @@ public class Crew implements Serializable {
 
     String name, agency, imageUrl, status, wikiInfo;
 
-    public Crew(String name, String agency, String imageUrl, String status, String wikiInfo) {
+    public Crew(String name, String agency, String imageUrl, String wikiInfo, String status) {
         this.name = name;
         this.agency = agency;
         this.imageUrl = imageUrl;

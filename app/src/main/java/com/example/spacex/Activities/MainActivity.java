@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                                 String wikipedia = object.get("wikipedia").toString();
                                 String status = object.get("status").toString();
 
-                                Crew crew = new Crew(name, agency, image, status, wikipedia);
+                                Crew crew = new Crew(name, agency, image, wikipedia, status);
 
                                 setUpDB().dao().crewInsertion(crew);
                                 setUpRecycleView();

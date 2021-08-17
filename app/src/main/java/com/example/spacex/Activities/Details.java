@@ -31,12 +31,12 @@ public class Details extends AppCompatActivity {
 
         Glide.with(getApplicationContext()).load(crew.getImageUrl()).into(binding.ProfilePic);
         binding.CrewFullName.setText(crew.getName());
-        binding.StatusInfo.setText(crew.getWikiInfo());
+        binding.StatusInfo.setText(crew.getStatus());
         binding.Agency.setText(crew.getAgency());
     }
 
     public void openWeb(View view) {
-        String url = crew.getStatus();
+        String url = crew.getWikiInfo();
         Uri webpage = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
         if (intent.resolveActivity(getPackageManager()) != null){
